@@ -3,9 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PC Bottleneck Calculator – Free CPU & GPU Bottleneck Analysis Tool 2026</title>
-<meta name="description" content="Free PC bottleneck calculator. Instantly find if your CPU or graphics card is bottlenecking your gaming or workstation build. Detailed charts, FPS estimates & upgrade recommendations — updated 2026.">
-<meta name="keywords" content="pc bottleneck calculator, cpu gpu bottleneck, bottleneck percentage, gaming pc performance, cpu bottleneck test 2026">
+<title>PC Bottleneck Calculator – Free CPU &amp; GPU Bottleneck Checker 2026</title>
+<meta name="description" content="Use our free PC Bottleneck Calculator to instantly check if your CPU or GPU is bottlenecking your build. Get bottleneck percentage, FPS estimates, charts &amp; upgrade recommendations — updated 2026.">
+<meta name="keywords" content="pc bottleneck calculator, cpu gpu bottleneck checker, bottleneck percentage, gaming pc performance, cpu bottleneck test, gpu bottleneck checker 2026">
+<link rel="canonical" href="https://pcbottleneckcalculator.vercel.app/">
+<meta property="og:title" content="PC Bottleneck Calculator – Free CPU &amp; GPU Bottleneck Checker 2026">
+<meta property="og:description" content="Instantly check if your CPU or GPU is bottlenecking your gaming PC. Free tool with live charts, FPS estimates &amp; upgrade recommendations.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pcbottleneckcalculator.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PC Bottleneck Calculator – Free CPU &amp; GPU Bottleneck Checker">
+<meta name="twitter:description" content="Instantly detect CPU or GPU bottlenecks in your PC build. Free, detailed, updated for 2026.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="BottleneckCalc">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -334,7 +344,7 @@ nav a:hover { background: var(--bg2); color: var(--text); }
 }
 .info-card:hover { box-shadow:var(--shadow-md); transform:translateY(-3px); border-color:var(--border2); }
 .info-card .ic { font-size:1.5rem; margin-bottom:12px; display:block; }
-.info-card h4 { font-weight:700; font-size:0.97rem; margin-bottom:9px; color:var(--text); }
+.info-card h3 { font-weight:700; font-size:0.97rem; margin-bottom:9px; color:var(--text); }
 .info-card p { font-size:0.865rem; color:var(--text-3); line-height:1.65; }
 
 /* ─── WHAT IS section ─── */
@@ -347,7 +357,7 @@ nav a:hover { background: var(--bg2); color: var(--text); }
   background:var(--white); border:1px solid var(--border);
   border-radius:var(--radius); padding:26px; box-shadow:var(--shadow-sm);
 }
-.steps-card h4 { font-weight:700; font-size:0.95rem; color:var(--text); margin-bottom:22px; }
+.steps-card h3 { font-weight:700; font-size:0.95rem; color:var(--text); margin-bottom:22px; }
 .step { display:flex; gap:14px; margin-bottom:18px; align-items:flex-start; }
 .step-n {
   width:26px; height:26px; border-radius:50%; flex-shrink:0;
@@ -365,7 +375,7 @@ nav a:hover { background: var(--bg2); color: var(--text); }
   background:var(--white); border:1px solid var(--border);
   border-radius:var(--radius); padding:26px; box-shadow:var(--shadow-sm);
 }
-.scale-card h4, .reading-card h4 { font-weight:700; font-size:0.95rem; color:var(--text); margin-bottom:22px; }
+.scale-card h3, .reading-card h3 { font-weight:700; font-size:0.95rem; color:var(--text); margin-bottom:22px; }
 .scale-bar { margin-bottom:16px; }
 .scale-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:7px; }
 .scale-row .slabel { font-size:0.84rem; font-weight:600; }
@@ -380,11 +390,8 @@ nav a:hover { background: var(--bg2); color: var(--text); }
   background:var(--white); border:1px solid var(--border);
   border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-sm);
 }
-.table-head-row {
-  background:var(--bg2); padding:18px 24px;
-  border-bottom:1px solid var(--border);
-}
-.table-head-row h4 { font-weight:700; font-size:0.95rem; color:var(--text); }
+.table-head-row { background:var(--bg2); padding:18px 24px; border-bottom:1px solid var(--border); }
+.table-section-h2 { font-family:var(--font-display); font-size:1.25rem; font-weight:700; color:var(--text); margin-bottom:4px; letter-spacing:-0.01em; }
 .table-head-row p { font-size:0.82rem; color:var(--text-3); margin-top:3px; }
 .cmp-table { width:100%; border-collapse:collapse; }
 .cmp-table th {
@@ -426,7 +433,7 @@ nav a:hover { background: var(--bg2); color: var(--text); }
   background:var(--white); border:1px solid var(--border);
   border-radius:var(--radius); padding:22px; box-shadow:var(--shadow-sm);
 }
-.chart-card h4 {
+.chart-card h3 {
   font-size:0.75rem; font-weight:700; text-transform:uppercase;
   letter-spacing:0.07em; color:var(--text-3); margin-bottom:16px;
 }
@@ -448,7 +455,7 @@ nav a:hover { background: var(--bg2); color: var(--text); }
   border-radius:var(--radius); padding:30px; box-shadow:var(--shadow-sm);
 }
 @media(max-width:640px){ .uc-panel.active{grid-template-columns:1fr;} }
-.uc-panel h4 { font-family:var(--font-display); font-size:1.25rem; color:var(--text); margin-bottom:12px; }
+.uc-panel h3 { font-family:var(--font-display); font-size:1.25rem; color:var(--text); margin-bottom:12px; }
 .uc-panel p { font-size:0.88rem; color:var(--text-3); line-height:1.72; margin-bottom:12px; }
 .spec-box { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:18px; }
 .spec-title { font-family:var(--font-mono); font-size:0.7rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-4); margin-bottom:12px; }
@@ -513,7 +520,7 @@ nav a:hover { background: var(--bg2); color: var(--text); }
 .chip-amd { background:#fff0ee; color:#ed1c24; border-color:#ffc4c6; }
 .chip-third { background:var(--blue-light); color:var(--blue); border-color:var(--blue-mid); }
 .src-arrow { font-size:0.85rem; color:var(--text-4); }
-.src-card h4 { font-size:0.93rem; font-weight:700; color:var(--text); }
+.src-card h3 { font-size:0.93rem; font-weight:700; color:var(--text); }
 .src-card p { font-size:0.81rem; color:var(--text-3); line-height:1.6; flex:1; }
 .src-url { font-family:var(--font-mono); font-size:0.72rem; color:var(--text-4); }
 
@@ -559,6 +566,134 @@ footer {
 .footer-bottom span { font-size:0.8rem; color:var(--text-4); }
 </style>
 </head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://bottleneckcalc.com/#website",
+      "name": "PC Bottleneck Calculator",
+      "url": "https://bottleneckcalc.com/",
+      "description": "Free PC Bottleneck Calculator — instantly check if your CPU or GPU is bottlenecking your gaming or workstation build.",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://pcbottleneckcalculator.vercel.app/#calculator",
+      "name": "PC Bottleneck Calculator – Free CPU & GPU Bottleneck Checker",
+      "url": "https://pcbottleneckcalculator.vercel.app/",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "description": "Free PC bottleneck calculator. Select your CPU, GPU, RAM, and resolution to instantly calculate your bottleneck percentage, get FPS estimates, interactive charts, and tailored upgrade recommendations.",
+      "featureList": [
+        "CPU bottleneck detection",
+        "GPU bottleneck detection",
+        "RAM adequacy check",
+        "FPS range estimation",
+        "Balance grade scoring",
+        "Interactive performance charts",
+        "Upgrade recommendations"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "isAccessibleForFree": true,
+      "inLanguage": "en-US",
+      "dateModified": "2026-01-01"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://pcbottleneckcalculator.vercel.app/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is a GPU bottleneck bad for gaming?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not at all — a mild GPU bottleneck (under 15%) is actually the ideal gaming scenario. It means your GPU is fully utilized, squeezing maximum frames from your graphics investment. CPU bottlenecks are worse because they leave your expensive GPU sitting idle below 80% utilization."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate are online bottleneck calculators?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bottleneck calculators provide useful estimates but aren't perfectly precise — real-world bottlenecks vary by game engine, driver optimization, and settings. Our tool is accurate within ±5–8% for most hardware combinations, using normalized data grounded in official specs from Intel ARK, AMD's official processor pages, and NVIDIA's GeForce product specs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does AMD 3D V-Cache reduce CPU bottlenecks in gaming?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AMD's 3D V-Cache (found in Ryzen 7 5800X3D, 7800X3D) stacks up to 64MB of L3 cache directly on top of the CPU die, reducing latency and dramatically increasing cache hit rates for game data. This technology can reduce CPU bottleneck situations in gaming by keeping more game assets in fast cache rather than fetching from slower system RAM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Resizable BAR and does it reduce bottlenecks?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Resizable BAR (ReBAR) is a PCIe feature that allows the CPU to access the GPU's full VRAM directly. NVIDIA's official ReBAR documentation shows 5–15% performance improvements in many games. AMD's equivalent is Smart Access Memory (SAM), which AMD states delivers up to 11% average gaming performance gains. Both directly reduce CPU-GPU data transfer bottlenecks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does NVIDIA DLSS / AMD FSR change my bottleneck situation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, significantly. NVIDIA DLSS 3 Frame Generation can multiply effective FPS by generating additional frames using dedicated hardware on RTX 40-series GPUs, with minimal CPU overhead. AMD's FSR 3 Frame Generation works similarly. These technologies can fundamentally change your bottleneck calculation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I check my actual CPU and GPU usage while gaming?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use MSI Afterburner + RivaTuner Statistics Server (free) — enable the on-screen display showing CPU usage, GPU usage, VRAM usage, and framerate. If your GPU sits below 80% while CPU hits 95–100%, you have a CPU bottleneck. If your GPU is at 99% while CPU is under 85%, that's an ideal GPU-limited scenario."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a bottleneck damage my PC hardware?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — a CPU or GPU bottleneck causes zero physical damage to hardware. All modern CPUs and GPUs have built-in thermal throttling and emergency shutdown protection. Intel, AMD, and NVIDIA all design their thermal management to handle sustained 100% load without damage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which should I upgrade first — CPU or GPU for gaming in 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For gaming, the GPU almost always delivers a bigger FPS improvement per dollar spent. The exception: when you have a severe CPU bottleneck (over 30%), upgrading the CPU first unlocks your existing GPU's wasted performance. Use a bottleneck calculator to determine your specific situation before making any upgrade decision."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "PC Bottleneck Calculator",
+          "item": "https://pcbottleneckcalculator.vercel.app/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://pcbottleneckcalculator.vercel.app/#organization",
+      "name": "BottleneckCalc",
+      "url": "https://pcbottleneckcalculator.vercel.app/"
+    }
+  ]
+}
+</script>
 <body>
 
 <!-- HEADER -->
@@ -585,7 +720,7 @@ footer {
 <div class="hero">
   <div class="hero-left">
     <div class="hero-eyebrow"><span class="dot"></span> Updated January 2026</div>
-    <h1>Find Your PC's <em>Bottleneck</em> in Seconds</h1>
+    <h1>PC Bottleneck Calculator – <em>Free CPU &amp; GPU</em> Bottleneck Checker</h1>
     <p class="hero-desc">Discover if your CPU or GPU is limiting your system. Get an instant bottleneck percentage, interactive charts, FPS estimates, and smart upgrade recommendations — completely free.</p>
     <div class="hero-pills">
       <span class="pill"><span class="pi">🖥️</span> 500+ CPUs</span>
@@ -617,7 +752,7 @@ footer {
       <span class="tbar-dot r"></span>
       <span class="tbar-dot y"></span>
       <span class="tbar-dot g"></span>
-      <span class="tbar-label">bottleneck-analyzer.exe — PC System Analysis v3.0 (2026)</span>
+      <span class="tbar-label"><h2>PC Bottleneck Calculator</h2></span>
     </div>
     <div class="calc-body">
 
@@ -752,7 +887,7 @@ footer {
       <p>Unlike basic comparisons, our tool factors in <strong>resolution scaling</strong> (4K reduces CPU impact by up to 70%), <strong>RAM capacity penalties</strong>, and <strong>use-case context weighting</strong> for an accurate, actionable result.</p>
     </div>
     <div class="steps-card">
-      <h4>⚙️ How This Calculator Works</h4>
+      <h3>⚙️ How This Calculator Works</h3>
       <div class="step"><div class="step-n">1</div><div><strong>Select Your Components</strong><span>Choose CPU, GPU, RAM, resolution, and use case from our 900+ component database.</span></div></div>
       <div class="step"><div class="step-n">2</div><div><strong>Score Normalization</strong><span>Each component gets a normalized 0–100 score from multi-benchmark averages including Cinebench R23, PassMark, and 3DMark.</span></div></div>
       <div class="step"><div class="step-n">3</div><div><strong>Context Weighting</strong><span>Scores are weighted by resolution (4K = 75% GPU weight) and use case (workstation = 65% CPU weight).</span></div></div>
@@ -770,12 +905,12 @@ footer {
   <h2 class="section-title">Types of PC <span class="red">Bottlenecks</span></h2>
   <p class="section-lead">Bottlenecks don't always come from just CPU or GPU. Understanding every type leads to smarter upgrade decisions.</p>
   <div class="cards-grid">
-    <div class="info-card"><span class="ic">🖥️</span><h4>CPU Bottleneck</h4><p>Your processor can't feed data fast enough to the GPU. GPU usage drops below 80% while CPU hits 100%. Most visible at 1080p in CPU-hungry titles, or when pairing a budget CPU with a high-end GPU. Directly affects minimum FPS and 1% lows.</p></div>
-    <div class="info-card"><span class="ic">🎮</span><h4>GPU Bottleneck</h4><p>The GPU is the limiting factor — it runs at 100% while the CPU sits below 90%. This is normal and even desirable at 1440p and 4K. A mild GPU bottleneck (under 15%) means you're fully using your graphics investment.</p></div>
-    <div class="info-card"><span class="ic">💾</span><h4>RAM Bottleneck</h4><p>Insufficient RAM forces games into virtual memory, causing severe stuttering. Modern AAA titles regularly consume 12–16GB. Below 16GB in 2026 is a hard bottleneck. RAM speed (MHz) also affects AMD Ryzen significantly via Infinity Fabric coupling.</p></div>
-    <div class="info-card"><span class="ic">📀</span><h4>Storage Bottleneck</h4><p>HDDs cause asset-streaming stutters in open-world games. Microsoft's DirectStorage (Windows 11 + NVMe) enables GPU-direct asset loading, bypassing CPU overhead entirely. An HDD in a modern gaming PC is a measurable bottleneck in open-world titles.</p></div>
-    <div class="info-card"><span class="ic">🔌</span><h4>PCIe Bandwidth Bottleneck</h4><p>Running a high-end GPU in a PCIe 3.0 x8 slot can reduce bandwidth by up to 50%. For most GPUs up to RTX 4080, real-world impact is under 3%. For RTX 4090 in constrained slots, impact can reach 5–8% — according to <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/compare/" target="_blank" rel="noopener" style="color:var(--blue)">NVIDIA's own comparison specs</a>.</p></div>
-    <div class="info-card"><span class="ic">🌡️</span><h4>Thermal Throttling</h4><p>Overheating causes CPUs and GPUs to reduce clock speeds to protect themselves. Often mistaken for a hardware mismatch. Thermal throttling produces inconsistent performance that worsens over time during a gaming session. Check temperatures with HWiNFO64.</p></div>
+    <div class="info-card"><span class="ic">🖥️</span><h3>CPU Bottleneck</h3><p>Your processor can't feed data fast enough to the GPU. GPU usage drops below 80% while CPU hits 100%. Most visible at 1080p in CPU-hungry titles, or when pairing a budget CPU with a high-end GPU. Directly affects minimum FPS and 1% lows.</p></div>
+    <div class="info-card"><span class="ic">🎮</span><h3>GPU Bottleneck</h3><p>The GPU is the limiting factor — it runs at 100% while the CPU sits below 90%. This is normal and even desirable at 1440p and 4K. A mild GPU bottleneck (under 15%) means you're fully using your graphics investment.</p></div>
+    <div class="info-card"><span class="ic">💾</span><h3>RAM Bottleneck</h3><p>Insufficient RAM forces games into virtual memory, causing severe stuttering. Modern AAA titles regularly consume 12–16GB. Below 16GB in 2026 is a hard bottleneck. RAM speed (MHz) also affects AMD Ryzen significantly via Infinity Fabric coupling.</p></div>
+    <div class="info-card"><span class="ic">📀</span><h3>Storage Bottleneck</h3><p>HDDs cause asset-streaming stutters in open-world games. Microsoft's DirectStorage (Windows 11 + NVMe) enables GPU-direct asset loading, bypassing CPU overhead entirely. An HDD in a modern gaming PC is a measurable bottleneck in open-world titles.</p></div>
+    <div class="info-card"><span class="ic">🔌</span><h3>PCIe Bandwidth Bottleneck</h3><p>Running a high-end GPU in a PCIe 3.0 x8 slot can reduce bandwidth by up to 50%. For most GPUs up to RTX 4080, real-world impact is under 3%. For RTX 4090 in constrained slots, impact can reach 5–8% — according to <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/compare/" target="_blank" rel="noopener" style="color:var(--blue)">NVIDIA's own comparison specs</a>.</p></div>
+    <div class="info-card"><span class="ic">🌡️</span><h3>Thermal Throttling</h3><p>Overheating causes CPUs and GPUs to reduce clock speeds to protect themselves. Often mistaken for a hardware mismatch. Thermal throttling produces inconsistent performance that worsens over time during a gaming session. Check temperatures with HWiNFO64.</p></div>
   </div>
 </section>
 
@@ -789,7 +924,7 @@ footer {
 
   <div class="interpret-grid">
     <div class="scale-card">
-      <h4>📊 Bottleneck Percentage Scale</h4>
+      <h3>📊 Bottleneck Percentage Scale</h3>
       <div class="scale-bar">
         <div class="scale-row"><span class="slabel" style="color:var(--green)">✅ Excellent</span><span class="srange">0 – 9%</span></div>
         <div class="scale-track" style="background:linear-gradient(90deg,#16a34a,#4ade80);width:9%;min-width:28px;height:9px;border-radius:100px;"></div>
@@ -818,7 +953,7 @@ footer {
     </div>
 
     <div class="reading-card">
-      <h4>🔍 Reading Each Metric</h4>
+      <h3>🔍 Reading Each Metric</h3>
       <div class="reading-item"><span class="ri-icon">📊</span><div class="ri-body"><strong>CPU / GPU Utilization Bars</strong><span>Expected utilization percentage of each component. The bottlenecking one runs near 100%; the other has headroom. Ideal gaming scenario: GPU 95–100%, CPU 70–88%.</span></div></div>
       <div class="reading-item"><span class="ri-icon">🎯</span><div class="ri-body"><strong>Bottleneck Percentage</strong><span>The performance gap between CPU and GPU weighted for your specific resolution and use case. Below 15% is ideal for gaming builds — this is the key number to focus on.</span></div></div>
       <div class="reading-item"><span class="ri-icon">🏆</span><div class="ri-body"><strong>Performance Tier</strong><span>Overall system capability: Entry → Mid-Low → Mid → Mid-High → High → Elite. Based on combined weighted performance across both components for your selected scenario.</span></div></div>
@@ -829,7 +964,7 @@ footer {
 
   <div class="table-card">
     <div class="table-head-row">
-      <h4>CPU vs GPU Bottleneck — Side-by-Side Comparison</h4>
+      <h2 class="table-section-h2">CPU vs GPU Bottleneck — Side-by-Side Comparison</h2>
       <p>Understanding the differences between bottleneck types helps you diagnose your system precisely</p>
     </div>
     <div style="overflow-x:auto;">
@@ -866,13 +1001,13 @@ footer {
   </div>
 
   <div class="charts-3">
-    <div class="chart-card"><h4>// GPU Market Share (Steam, Jan 2026)</h4><canvas id="gpuMarketChart"></canvas></div>
-    <div class="chart-card"><h4>// Gaming Resolution Distribution</h4><canvas id="resolutionChart"></canvas></div>
-    <div class="chart-card"><h4>// RAM Adoption by Capacity</h4><canvas id="ramChart"></canvas></div>
+    <div class="chart-card"><h3>// GPU Market Share (Steam, Jan 2026)</h3><canvas id="gpuMarketChart"></canvas></div>
+    <div class="chart-card"><h3>// Gaming Resolution Distribution</h3><canvas id="resolutionChart"></canvas></div>
+    <div class="chart-card"><h3>// RAM Adoption by Capacity</h3><canvas id="ramChart"></canvas></div>
   </div>
   <div class="charts-2">
-    <div class="chart-card"><h4>// CPU Bottleneck % by Resolution (Gaming Builds)</h4><canvas id="bottleneckResChart" style="max-height:230px;"></canvas></div>
-    <div class="chart-card"><h4>// FPS Impact: Balanced vs CPU-Bottlenecked Build (1440p)</h4><canvas id="fpsImpactChart" style="max-height:230px;"></canvas></div>
+    <div class="chart-card"><h3>// CPU Bottleneck % by Resolution (Gaming Builds)</h3><canvas id="bottleneckResChart" style="max-height:230px;"></canvas></div>
+    <div class="chart-card"><h3>// FPS Impact: Balanced vs CPU-Bottlenecked Build (1440p)</h3><canvas id="fpsImpactChart" style="max-height:230px;"></canvas></div>
   </div>
 </section>
 
@@ -891,7 +1026,7 @@ footer {
     <button class="tab-btn" onclick="switchTab('streaming',this)">📡 Streaming</button>
   </div>
   <div class="uc-panel active" id="tab-gaming">
-    <div><h4>1080p Gaming Build</h4><p>At 1080p, the CPU drives most of the performance — especially at high frame rates (144Hz+). Games need fast single-core performance to generate draw calls quickly enough to keep the GPU fed. A CPU bottleneck is most visible at this resolution.</p><p>Aim for GPU utilization of 95%+ at 1080p. If your GPU sits below 80%, upgrade the CPU first. Competitive titles like Valorant, CS2, and Warzone are extremely CPU-sensitive and benefit most from fast single-core processors.</p></div>
+    <div><h3>1080p Gaming Build</h3><p>At 1080p, the CPU drives most of the performance — especially at high frame rates (144Hz+). Games need fast single-core performance to generate draw calls quickly enough to keep the GPU fed. A CPU bottleneck is most visible at this resolution.</p><p>Aim for GPU utilization of 95%+ at 1080p. If your GPU sits below 80%, upgrade the CPU first. Competitive titles like Valorant, CS2, and Warzone are extremely CPU-sensitive and benefit most from fast single-core processors.</p></div>
     <div class="spec-box"><div class="spec-title">Example Balanced Build — 1080p 144Hz</div>
       <div class="spec-row"><span class="sk">CPU</span><span class="sv g">Intel Core i5-13600K / Ryzen 5 7600X</span></div>
       <div class="spec-row"><span class="sk">GPU</span><span class="sv g">RTX 4060 Ti / RX 7700 XT</span></div>
@@ -902,7 +1037,7 @@ footer {
     </div>
   </div>
   <div class="uc-panel" id="tab-1440p">
-    <div><h4>1440p Gaming — The Sweet Spot</h4><p>1440p shifts around 60% of performance burden to the GPU. CPU bottlenecks become far less common, and most mid-to-high-end CPUs can fully utilize top-tier GPUs. This is the most balanced resolution for modern hardware in 2026.</p><p>1440p is the fastest growing segment — growing from 11% to over 16% of Steam users in 2024-2025. It's where hardware investments deliver the clearest real-world returns.</p></div>
+    <div><h3>1440p Gaming — The Sweet Spot</h3><p>1440p shifts around 60% of performance burden to the GPU. CPU bottlenecks become far less common, and most mid-to-high-end CPUs can fully utilize top-tier GPUs. This is the most balanced resolution for modern hardware in 2026.</p><p>1440p is the fastest growing segment — growing from 11% to over 16% of Steam users in 2024-2025. It's where hardware investments deliver the clearest real-world returns.</p></div>
     <div class="spec-box"><div class="spec-title">Example Balanced Build — 1440p 165Hz</div>
       <div class="spec-row"><span class="sk">CPU</span><span class="sv g">Ryzen 7 7700X / Intel i7-13700K</span></div>
       <div class="spec-row"><span class="sk">GPU</span><span class="sv g">RTX 4070 Super / RX 7800 XT</span></div>
@@ -913,7 +1048,7 @@ footer {
     </div>
   </div>
   <div class="uc-panel" id="tab-4k">
-    <div><h4>4K Gaming — GPU Dominates</h4><p>4K pushes 75%+ of workload onto the GPU. Even a mid-range CPU can fully utilize a flagship GPU at 4K without a meaningful bottleneck. Don't overspend on CPU when building a 4K rig — that budget belongs in the GPU.</p><p>VRAM is critical at 4K — most modern AAA titles require 10–16GB at Ultra settings. An RTX 4060 Ti 8GB will face VRAM pressure at 4K despite strong raw GPU performance.</p></div>
+    <div><h3>4K Gaming — GPU Dominates</h3><p>4K pushes 75%+ of workload onto the GPU. Even a mid-range CPU can fully utilize a flagship GPU at 4K without a meaningful bottleneck. Don't overspend on CPU when building a 4K rig — that budget belongs in the GPU.</p><p>VRAM is critical at 4K — most modern AAA titles require 10–16GB at Ultra settings. An RTX 4060 Ti 8GB will face VRAM pressure at 4K despite strong raw GPU performance.</p></div>
     <div class="spec-box"><div class="spec-title">Example Balanced Build — 4K 60–120Hz</div>
       <div class="spec-row"><span class="sk">CPU</span><span class="sv y">i5-13600K (sufficient at 4K)</span></div>
       <div class="spec-row"><span class="sk">GPU</span><span class="sv g">RTX 4080 Super / RX 7900 XTX</span></div>
@@ -924,7 +1059,7 @@ footer {
     </div>
   </div>
   <div class="uc-panel" id="tab-creative">
-    <div><h4>Creative Workstation</h4><p>Video editing, 3D rendering, and AI/ML workloads are multi-threaded CPU tasks first, with GPU acceleration as secondary. DaVinci Resolve, Blender, and Premiere Pro leverage GPU CUDA/ROCm cores for effects and rendering, but timeline management is CPU-bound.</p><p>For creative work, VRAM quantity matters more than raw GPU speed — 24GB is the sweet spot for 4K video editing and AI image generation workflows in 2026.</p></div>
+    <div><h3>Creative Workstation</h3><p>Video editing, 3D rendering, and AI/ML workloads are multi-threaded CPU tasks first, with GPU acceleration as secondary. DaVinci Resolve, Blender, and Premiere Pro leverage GPU CUDA/ROCm cores for effects and rendering, but timeline management is CPU-bound.</p><p>For creative work, VRAM quantity matters more than raw GPU speed — 24GB is the sweet spot for 4K video editing and AI image generation workflows in 2026.</p></div>
     <div class="spec-box"><div class="spec-title">Example Workstation Build</div>
       <div class="spec-row"><span class="sk">CPU</span><span class="sv g">Ryzen 9 7950X / Intel i9-14900K</span></div>
       <div class="spec-row"><span class="sk">GPU</span><span class="sv g">RTX 4080 / RTX 3090 (24GB)</span></div>
@@ -935,7 +1070,7 @@ footer {
     </div>
   </div>
   <div class="uc-panel" id="tab-streaming">
-    <div><h4>Gaming + Streaming</h4><p>Streaming adds significant CPU overhead — software encoding (x264) is extremely CPU-intensive. NVIDIA's NVENC on RTX GPUs offloads encoding to dedicated hardware, maintaining gaming performance while streaming at high quality.</p><p>Using NVENC or AMD's AMF encoder is the recommended approach for 2026. This eliminates the CPU encoding bottleneck and delivers near-lossless stream quality with minimal performance overhead on the gaming side.</p></div>
+    <div><h3>Gaming + Streaming</h3><p>Streaming adds significant CPU overhead — software encoding (x264) is extremely CPU-intensive. NVIDIA's NVENC on RTX GPUs offloads encoding to dedicated hardware, maintaining gaming performance while streaming at high quality.</p><p>Using NVENC or AMD's AMF encoder is the recommended approach for 2026. This eliminates the CPU encoding bottleneck and delivers near-lossless stream quality with minimal performance overhead on the gaming side.</p></div>
     <div class="spec-box"><div class="spec-title">Example Streaming Build</div>
       <div class="spec-row"><span class="sk">CPU</span><span class="sv g">Ryzen 7 7800X3D / i7-13700K</span></div>
       <div class="spec-row"><span class="sk">GPU</span><span class="sv g">RTX 4070 (NVENC Gen 9)</span></div>
@@ -969,25 +1104,25 @@ footer {
     <div class="src-grid">
       <a href="https://ark.intel.com/" target="_blank" rel="noopener" class="src-card intel-card">
         <div class="src-top"><span class="src-chip chip-intel">Official Tool</span><span class="src-arrow">↗</span></div>
-        <h4>Intel ARK — Product Specifications</h4>
+        <h3>Intel ARK — Product Specifications</h3>
         <p>Intel's official product specification database covering every Intel processor ever released. Look up TDP, core counts, base/boost clocks, PCIe lanes, memory support, and compatibility details for any Intel CPU — directly from the manufacturer.</p>
         <span class="src-url">ark.intel.com</span>
       </a>
       <a href="https://www.intel.com/content/www/us/en/gaming/resources/how-to-choose-a-gaming-cpu.html" target="_blank" rel="noopener" class="src-card intel-card">
         <div class="src-top"><span class="src-chip chip-intel">Official Guide</span><span class="src-arrow">↗</span></div>
-        <h4>Intel Gaming CPU Selection Guide</h4>
+        <h3>Intel Gaming CPU Selection Guide</h3>
         <p>Intel's official guide to choosing the right CPU for gaming. Covers how CPUs impact frame rates, the role of core count vs clock speed in gaming, and why certain Intel Core generations excel in specific gaming workloads.</p>
         <span class="src-url">intel.com/gaming</span>
       </a>
       <a href="https://www.intel.com/content/www/us/en/products/details/processors/core.html" target="_blank" rel="noopener" class="src-card intel-card">
         <div class="src-top"><span class="src-chip chip-intel">Product Line</span><span class="src-arrow">↗</span></div>
-        <h4>Intel Core Processor Lineup</h4>
+        <h3>Intel Core Processor Lineup</h3>
         <p>Official comparison page for Intel's current Core processor family — Core Ultra 200 series, Core i9/i7/i5/i3 with official benchmark comparisons, gaming performance claims, and feature highlights directly from Intel Engineering.</p>
         <span class="src-url">intel.com/core-processors</span>
       </a>
       <a href="https://www.intel.com/content/www/us/en/gaming/resources/gaming-benchmarks.html" target="_blank" rel="noopener" class="src-card intel-card">
         <div class="src-top"><span class="src-chip chip-intel">Benchmarks</span><span class="src-arrow">↗</span></div>
-        <h4>Intel Official Gaming Benchmarks</h4>
+        <h3>Intel Official Gaming Benchmarks</h3>
         <p>Intel's own benchmark results across popular games, showing comparative performance across Core generations. Useful for validating which CPU generation provides a meaningful gaming upgrade for your current platform.</p>
         <span class="src-url">intel.com/benchmarks</span>
       </a>
@@ -1003,25 +1138,25 @@ footer {
     <div class="src-grid">
       <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/" target="_blank" rel="noopener" class="src-card nvidia-card">
         <div class="src-top"><span class="src-chip chip-nvidia">Official Specs</span><span class="src-arrow">↗</span></div>
-        <h4>NVIDIA GeForce GPU Specifications</h4>
+        <h3>NVIDIA GeForce GPU Specifications</h3>
         <p>Official NVIDIA product pages for all GeForce RTX 40-series and RTX 50-series graphics cards. Find official TFLOPS, VRAM capacity, memory bandwidth, TDP, and architecture details — the ground truth for GPU performance data.</p>
         <span class="src-url">nvidia.com/geforce</span>
       </a>
       <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/compare/" target="_blank" rel="noopener" class="src-card nvidia-card">
         <div class="src-top"><span class="src-chip chip-nvidia">Compare Tool</span><span class="src-arrow">↗</span></div>
-        <h4>NVIDIA Official GPU Comparison Tool</h4>
+        <h3>NVIDIA Official GPU Comparison Tool</h3>
         <p>NVIDIA's own side-by-side GPU comparison tool. Compare specifications across RTX models including shader count, VRAM, boost clocks, TDP, and PCIe bandwidth requirements — invaluable for upgrade planning.</p>
         <span class="src-url">nvidia.com/compare</span>
       </a>
       <a href="https://www.nvidia.com/en-us/geforce/technologies/dlss/" target="_blank" rel="noopener" class="src-card nvidia-card">
         <div class="src-top"><span class="src-chip chip-nvidia">Technology</span><span class="src-arrow">↗</span></div>
-        <h4>NVIDIA DLSS & Frame Generation</h4>
+        <h3>NVIDIA DLSS &amp; Frame Generation</h3>
         <p>Official DLSS 3 documentation explaining how AI-powered upscaling and Frame Generation can multiply effective FPS, changing bottleneck dynamics. DLSS can shift a GPU-bottlenecked build by effectively doubling frame output with minimal CPU overhead.</p>
         <span class="src-url">nvidia.com/dlss</span>
       </a>
       <a href="https://www.nvidia.com/en-us/geforce/technologies/resizable-bar/" target="_blank" rel="noopener" class="src-card nvidia-card">
         <div class="src-top"><span class="src-chip chip-nvidia">Technology</span><span class="src-arrow">↗</span></div>
-        <h4>NVIDIA Resizable BAR (ReBAR)</h4>
+        <h3>NVIDIA Resizable BAR (ReBAR)</h3>
         <p>Official NVIDIA guide to Resizable BAR — a PCIe technology that allows the CPU to access the full GPU VRAM directly, reducing CPU-to-GPU data transfer bottlenecks and improving performance in CPU-limited scenarios by 5–15%.</p>
         <span class="src-url">nvidia.com/rebar</span>
       </a>
@@ -1037,25 +1172,25 @@ footer {
     <div class="src-grid">
       <a href="https://www.amd.com/en/products/processors/desktops.html" target="_blank" rel="noopener" class="src-card amd-card">
         <div class="src-top"><span class="src-chip chip-amd">Official Specs</span><span class="src-arrow">↗</span></div>
-        <h4>AMD Ryzen Desktop Processor Lineup</h4>
+        <h3>AMD Ryzen Desktop Processor Lineup</h3>
         <p>Official AMD product specifications for all Ryzen 7000 and Ryzen 9000 series desktop processors. Find official core counts, boost clocks, TDP, PCIe gen support, and memory specifications directly from AMD Engineering.</p>
         <span class="src-url">amd.com/ryzen-desktop</span>
       </a>
       <a href="https://www.amd.com/en/products/graphics/desktops.html" target="_blank" rel="noopener" class="src-card amd-card">
         <div class="src-top"><span class="src-chip chip-amd">Official Specs</span><span class="src-arrow">↗</span></div>
-        <h4>AMD Radeon RX Graphics Cards</h4>
+        <h3>AMD Radeon RX Graphics Cards</h3>
         <p>Official AMD Radeon RX 7000 series product pages with compute units, VRAM capacity, memory bandwidth, and official benchmark claims. The primary source for Radeon GPU specifications used in our calculator database.</p>
         <span class="src-url">amd.com/radeon-desktop</span>
       </a>
       <a href="https://www.amd.com/en/technologies/infinity-cache" target="_blank" rel="noopener" class="src-card amd-card">
         <div class="src-top"><span class="src-chip chip-amd">Technology</span><span class="src-arrow">↗</span></div>
-        <h4>AMD Infinity Cache Technology</h4>
+        <h3>AMD Infinity Cache Technology</h3>
         <p>Official AMD documentation on AMD Infinity Cache — the large on-die L3 cache in Ryzen 3D V-Cache processors (5800X3D, 7800X3D). Explains how 3D V-Cache dramatically reduces CPU bottlenecks in gaming by enabling far faster memory access for game data.</p>
         <span class="src-url">amd.com/infinity-cache</span>
       </a>
       <a href="https://www.amd.com/en/technologies/smartaccess-memory" target="_blank" rel="noopener" class="src-card amd-card">
         <div class="src-top"><span class="src-chip chip-amd">Technology</span><span class="src-arrow">↗</span></div>
-        <h4>AMD Smart Access Memory (SAM)</h4>
+        <h3>AMD Smart Access Memory (SAM)</h3>
         <p>Official AMD documentation on Smart Access Memory — AMD's implementation of Resizable BAR, allowing the Ryzen CPU to access the full Radeon GPU VRAM, reducing CPU-GPU transfer bottlenecks. AMD claims 6–11% average gaming performance gains with SAM enabled.</p>
         <span class="src-url">amd.com/smart-access-memory</span>
       </a>
@@ -1071,25 +1206,25 @@ footer {
     <div class="src-grid">
       <a href="https://store.steampowered.com/hwsurvey/" target="_blank" rel="noopener" class="src-card third-card">
         <div class="src-top"><span class="src-chip chip-third">Live Survey</span><span class="src-arrow">↗</span></div>
-        <h4>Steam Hardware Survey</h4>
+        <h3>Steam Hardware Survey</h3>
         <p>Monthly-updated hardware survey of Steam's 130M+ users. The gold standard for real-world gaming PC hardware data — showing actual GPU, CPU, RAM, and resolution distribution among active gamers worldwide.</p>
         <span class="src-url">store.steampowered.com/hwsurvey</span>
       </a>
       <a href="https://www.cpubenchmark.net/compare/" target="_blank" rel="noopener" class="src-card third-card">
         <div class="src-top"><span class="src-chip chip-third">Benchmark DB</span><span class="src-arrow">↗</span></div>
-        <h4>PassMark CPU Benchmark Compare</h4>
+        <h3>PassMark CPU Benchmark Compare</h3>
         <p>The most comprehensive, continuously updated CPU benchmark database. Multi-thread and single-thread PassMark scores across thousands of processors — one of the primary data sources used for our normalized CPU performance scores.</p>
         <span class="src-url">cpubenchmark.net</span>
       </a>
       <a href="https://www.3dmark.com/" target="_blank" rel="noopener" class="src-card third-card">
         <div class="src-top"><span class="src-chip chip-third">Benchmark</span><span class="src-arrow">↗</span></div>
-        <h4>3DMark GPU Benchmarks</h4>
+        <h3>3DMark GPU Benchmarks</h3>
         <p>The gold standard for GPU benchmark testing — Time Spy (DX12), Port Royal (ray tracing), and Speed Way. Provides methodology-consistent scores across thousands of GPUs and is the most widely cited GPU benchmark by hardware reviewers globally.</p>
         <span class="src-url">3dmark.com</span>
       </a>
       <a href="https://www.techpowerup.com/gpu-specs/" target="_blank" rel="noopener" class="src-card third-card">
         <div class="src-top"><span class="src-chip chip-third">Spec Database</span><span class="src-arrow">↗</span></div>
-        <h4>TechPowerUp GPU Specifications</h4>
+        <h3>TechPowerUp GPU Specifications</h3>
         <p>The most detailed GPU specifications database available — covering memory bandwidth, VRAM type, TDP, shader counts, and architecture details for every GPU ever released. Essential for VRAM adequacy analysis and cross-vendor comparison.</p>
         <span class="src-url">techpowerup.com/gpu-specs</span>
       </a>
@@ -1156,7 +1291,7 @@ footer {
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 BottleneckCalc — Free PC Performance Analysis Tool</span>
+    <span>© 2026 PC Bottleneck Calculator – Free CPU & GPU Bottleneck Checker</span>
     <span>Data sources: Intel ARK · NVIDIA GeForce · AMD · Steam Survey · PassMark · 3DMark</span>
   </div>
 </footer>
